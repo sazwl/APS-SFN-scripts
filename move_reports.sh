@@ -13,6 +13,6 @@ acro="*$acro"
 
 
 cd $subdirfrom
-mv $acro*$reporttype*$datestring* $subdirto
+mv *$acro*$reporttype*$datestring* $subdirto
 
 
