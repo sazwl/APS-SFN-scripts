@@ -9,22 +9,22 @@ while getopts "abcd" opt; do
                 a)
                 echo "- DART bulk move"
                 option="a"
-				detail="This script works under ths assumption that the files meet the following pattern: *WP_[ACRONYM]*REPORT_TYPE*DATE*"
+		detail="This script works under ths assumption that the files meet the following pattern: *WP_[ACRONYM]*REPORT_TYPE*DATE*"
                 ;;
                 b)
                 echo "- DART bulk copy"
-		        option="b"
-				detail="This script works under ths assumption that the files meet the following pattern: *WP_[ACRONYM]*REPORT_TYPE*DATE*"
+		option="b"
+		detail="This script works under ths assumption that the files meet the following pattern: *WP_[ACRONYM]*REPORT_TYPE*DATE*"
                 ;; 
                 c)
                 echo "- EMIS-99 bulk move"
-		        option="c"
-				detail="This script works under ths assumption that the files meet the following pattern: *RECON*ACRONYM*DATE*"
+		option="c"
+		detail="This script works under ths assumption that the files meet the following pattern: *RECON*ACRONYM*DATE*"
                 ;;
                 d)
                 echo "- EMIS-99 bulk copy"
-		        option="d"
-				detail="This script works under ths assumption that the files meet the following pattern: *RECON*ACRONYM*DATE*"
+		option="d"
+		detail="This script works under ths assumption that the files meet the following pattern: *RECON*ACRONYM*DATE*"
                 ;;
 		\?)
                 echo "Usage: -a DART bulk move | -b DART bulk copy | -c EMIS-99 bulk move | -d EMIS-99 bulk copy"
@@ -44,8 +44,8 @@ read -p 'Input the filename containing DART migration acronyms (file must be in 
 read -p 'Input DART report number string (e.g. DART-312 = 312TRC_2 DART-312_V03 = 312TRC_V03): ' reporttype
 read -p 'Input date of file as yymmdd (e.g. 200611): ' datestring
 echo "Current directory: $startdir"
-read -p 'Input full directory to move from: ' subdirfrom
-read -p 'Input full directory to move to: ' subdirto
+read -p 'Input full directory to move/copy from: ' subdirfrom
+read -p 'Input full directory to move/copy to: ' subdirto
 
 # option -a - DART move
 if [ "$option" = "a" ]; 
