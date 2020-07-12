@@ -33,9 +33,9 @@ while getopts "abcd" opt; do
         esac
 done
 
-if [ -z "$name" ] #if name is undefined no parameter has been passed and program exits
+if [ -z "$option" ] #if name is undefined no parameter has been passed and program exits
 then
-   echo "Use parameters to define extract mode. Usage: -a AUTHS | -t SalesRefunds TXN | -s SalesRefunds STL | -c CHBKS | -r RECON | -f FEES" 
+   echo "Usage: -a DART bulk move | -b DART bulk copy | -c EMIS-99 bulk move | -d EMIS-99 bulk copy"
    exit
 fi
 
