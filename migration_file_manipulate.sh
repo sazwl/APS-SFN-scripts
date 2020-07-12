@@ -1,4 +1,5 @@
 #! /bin/bash
+# Matt Saywell updated 20200712
 
 startdir=$(pwd)
 echo "*** BULK ACRONYM MOVE FOR DART/EMIS ***"
