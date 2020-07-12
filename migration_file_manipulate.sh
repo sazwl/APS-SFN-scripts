@@ -8,25 +8,25 @@ while getopts "abcd" opt; do
         case $opt in
                 a)
                 echo "- DART bulk move"
-                option="DARTmv"
+                option="a"
 				detail="This script works under ths assumption that the files meet the following pattern: *WP_[ACRONYM]*REPORT_TYPE*DATE*"
                 ;;
                 b)
                 echo "- DART bulk copy"
-		        option="DARTcp"
+		        option="b"
 				detail="This script works under ths assumption that the files meet the following pattern: *WP_[ACRONYM]*REPORT_TYPE*DATE*"
                 ;; 
                 c)
                 echo "- EMIS-99 bulk move"
-		        option="EMIS99mv"
+		        option="c"
 				detail="This script works under ths assumption that the files meet the following pattern: *RECON*ACRONYM*DATE*"
                 ;;
                 d)
                 echo "- EMIS-99 bulk copy"
-		        option="EMIS99mv"
+		        option="d"
 				detail="This script works under ths assumption that the files meet the following pattern: *RECON*ACRONYM*DATE*"
                 ;;
-				\?)
+		\?)
                 echo "Usage: -a DART bulk move | -b DART bulk copy | -c EMIS-99 bulk move | -d EMIS-99 bulk copy"
                 exit
                 ;;
