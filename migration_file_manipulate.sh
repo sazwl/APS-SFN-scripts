@@ -1,21 +1,22 @@
 #! /bin/bash
 
 startdir=$(pwd)
-echo "*** MIGRATION ACRONYM MOVER ***"
-read -p 'Input the filename containing migration acronyms: ' inputfile
-read -p 'Input DART report number (e.g. for DART-320 enter 320): ' reporttype
-read -p 'Input date of file (e.g. 20200611): ' datestring
+echo "*** MIGRATION ACRONYM MOVER FOR DART ***"
+echo "This script works under ths assumption that the files meet the following pattern: *WP_[ACRONYM]*REPORT_TYPE*DATE*"
+read -p 'Input the filename containing DART migration acronyms (file must be in the current pwd): ' inputfile
+read -p 'Input DART report number string (e.g. DART-312 = 312TRC_2 DART-312_V03 = 312TRC_V03): ' reporttype
+read -p 'Input date of file as yymmdd (e.g. 200611): ' datestring
 echo "Current directory: $startdir"
-read -p 'Input subdirectory to move from: $startdir' subdirfrom
-read -p 'Input subdirectory to move to: $startdir' subdirto
+read -p 'Input full directory to move from: ' subdirfrom
+read -p 'Input full directory to move to: ' subdirto
 
 while IFS= read -r line
 do
 	cd $subdirfrom
-	mv $line*$reporttype*$datestring* "$startdir/$subdirto"
-	cd "$startdir/$subdirto"
-	ls $line*$reporttype*$datestring*
+	mv -t "$subdirto" *WP_$line*$reporttype*$datestring*
+	cd "$subdirto"
+	ls *WP_$line*$reporttype*$datestring*
 	cd "$startdir"
 done < "$inputfile"
 
-echo "Done!"
+echo "Done! Check for any errors in the above output."
