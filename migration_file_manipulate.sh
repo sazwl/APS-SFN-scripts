@@ -1,7 +1,7 @@
 #! /bin/bash
 
 startdir=$(pwd)
-echo "*** MIGRATION ACRONYM MOVER FOR DART ***"
+echo "*** BULK ACRONYM MOVE FOR DART/EMIS ***"
 
 # process parameters
 while getopts "abcd" opt; do
@@ -41,12 +41,14 @@ fi
 
 echo "$detail"
 read -p 'Input the filename containing DART migration acronyms (file must be in the current pwd): ' inputfile
+# Differing options for DART and EMIS99 defined here
 if [ "$option" = "a" ] || [ "$option" = "b" ] 
 then
 	read -p 'Input DART report number string (e.g. DART-312 = 312TRC_2 DART-312_V03 = 312TRC_V03): ' reporttype
-exit
+	read -p 'Input date of file as yymmdd (e.g. 200611): ' datestring
+else
+	read -p 'Input date of file as ddmmyy (e.g. 110620): ' datestring
 fi
-read -p 'Input date of file as yymmdd (e.g. 200611): ' datestring
 echo "Current directory: $startdir"
 read -p 'Input full directory to move/copy from: ' subdirfrom
 read -p 'Input full directory to move/copy to: ' subdirto
