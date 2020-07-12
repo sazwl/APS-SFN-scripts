@@ -41,7 +41,11 @@ fi
 
 echo "$detail"
 read -p 'Input the filename containing DART migration acronyms (file must be in the current pwd): ' inputfile
-read -p 'Input DART report number string (e.g. DART-312 = 312TRC_2 DART-312_V03 = 312TRC_V03): ' reporttype
+if [ "$option" = "a" ] || [ "$option" = "b" ] 
+then
+	read -p 'Input DART report number string (e.g. DART-312 = 312TRC_2 DART-312_V03 = 312TRC_V03): ' reporttype
+exit
+fi
 read -p 'Input date of file as yymmdd (e.g. 200611): ' datestring
 echo "Current directory: $startdir"
 read -p 'Input full directory to move/copy from: ' subdirfrom
