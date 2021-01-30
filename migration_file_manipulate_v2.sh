@@ -137,5 +137,4 @@ if [ "$option" = "e" ];
 			find . -name *WP_$line*$reporttype*$datestring*
 		done < "$inputfile"
 
-
 fi
