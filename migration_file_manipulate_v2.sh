@@ -63,8 +63,6 @@ then
 	echo "Current directory: $startdir"
 	read -p 'Input full directory to move/copy from: ' subdirfrom
 	read -p 'Input full directory to move/copy to: ' subdirto
-else
-	break
 fi
 
 # option -a - DART move
