@@ -43,7 +43,7 @@ done
 
 if [ -z "$option" ] #if name is undefined no parameter has been passed and program exits
 then
-   echo "Usage: -a DART bulk move | -b DART bulk copy | -c EMIS-99 bulk move | -d EMIS-99 bulk copy | -e DART bulk find
+   echo "Usage: -a DART bulk move | -b DART bulk copy | -c EMIS-99 bulk move | -d EMIS-99 bulk copy | -e DART bulk find"
    exit
 fi
 
