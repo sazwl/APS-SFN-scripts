@@ -50,7 +50,7 @@ fi
 echo "$detail"
 read -p 'Input the filename containing DART migration acronyms (file must be in the current pwd): ' inputfile
 # Differing options for DART and EMIS99 defined here
-if [ "$option" = "a" ] || [ "$option" = "b" ] 
+if [ "$option" = "a" ] || [ "$option" = "b" ] || [ "$option" = "e" ]
 then
 	read -p 'Input DART report number string (e.g. DART-312 = 312TRC_2 DART-312_V03 = 312TRC_V03): ' reporttype
 	read -p 'Input date of file as yymmdd (e.g. 200611): ' datestring
