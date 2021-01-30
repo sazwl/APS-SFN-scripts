@@ -7,7 +7,7 @@ startdir=$(pwd)
 echo "*** BULK ACRONYM MOVE FOR DART/EMIS ***"
 
 # process parameters
-while getopts "abcd" opt; do
+while getopts "abcde" opt; do
         case $opt in
                 a)
                 echo "- DART bulk move"
