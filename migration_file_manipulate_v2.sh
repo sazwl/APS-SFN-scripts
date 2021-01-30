@@ -1,4 +1,4 @@
-=#! /bin/bash
+#! /bin/bash
 
 # Matt Saywell initial version: 20200712
 # Matt Saywell version 2: 20210120
