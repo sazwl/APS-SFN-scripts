@@ -128,6 +128,7 @@ if [ "$option" = "d" ];
 
 fi
 
+
 # option -e  - DART find
 if [ "$option" = "e" ]; 
 	then
@@ -135,5 +136,6 @@ if [ "$option" = "e" ];
 		do
 			find . -name *WP_$line*$reporttype*$datestring*
 		done < "$inputfile"
+
 
 fi
